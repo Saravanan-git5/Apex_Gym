@@ -1,0 +1,842 @@
+/* ==========================================================================
+   SARAVANAN GYM & FITNESS CLUB - CONTENT PAGES STYLESHEET (content.css)
+   Layout: Two-column layout (Header, Left Aside, Section, Footer)
+   Features: 2-column article, figure/caption, pure HTML/CSS Carousel, audio & PDF links
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap');
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background-color: #e9ecef;
+}
+
+/* Fallback visual state if image is missing */
+img:not([src]), img[src=""], img[src="null"] {
+  min-height: 60px;
+  background: #2c3e50 url('../images/placeholder.svg') no-repeat center center;
+  background-size: cover;
+  border: 1px dashed #e74c3c;
+}
+
+/* Page Container: Fixed-width and centered */
+#container {
+  width: 980px;
+  max-width: 98%;
+  margin: 20px auto;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid #dcdde1;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Header with Gradient */
+header {
+  background: #141e30;
+  background: -webkit-linear-gradient(to right, #141e30, #780206, #ba131a);
+  background: linear-gradient(135deg, #141e30 0%, #780206 50%, #ba131a 100%);
+  color: #ffffff;
+  padding: 24px 30px;
+  border-bottom: 3px solid #ff4b2b;
+}
+
+.header-brand {
+  overflow: hidden;
+}
+
+.header-logo {
+  float: left;
+  width: 75px;
+  height: 75px;
+  margin-right: 20px;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
+}
+
+.header-titles {
+  float: left;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+header .tagline {
+  font-size: 15px;
+  font-style: italic;
+  color: #f5af19;
+  margin: 0;
+}
+
+/* Navigation */
+nav.main-nav {
+  background-color: #11141a;
+  border-bottom: 1px solid #333a42;
+}
+
+nav.main-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav.main-nav li {
+  float: left;
+}
+
+nav.main-nav a {
+  display: block;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 13px 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border-right: 1px solid #252b33;
+  transition: all 0.25s ease-in-out;
+}
+
+nav.main-nav a:hover {
+  background-color: #ba131a;
+  color: #ffffff;
+}
+
+nav.main-nav a.current {
+  background-color: #ba131a;
+  color: #ffffff;
+  border-bottom: 3px solid #ff7657;
+}
+
+/* Clearfix */
+.clearfix::after,
+#main-wrapper::after,
+header::after,
+nav.main-nav ul::after,
+.sidebar-item::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Main Wrapper: Two-column layout */
+#main-wrapper {
+  padding: 24px;
+  background-color: #ffffff;
+}
+
+/* Left Aside: Two-column layout */
+aside.content-sidebar {
+  float: left;
+  width: 25%;
+  padding: 16px 14px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+}
+
+aside.content-sidebar h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #780206;
+  border-bottom: 2px solid #780206;
+  padding-bottom: 6px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+aside.content-sidebar h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  margin: 16px 0 8px 0;
+}
+
+/* Back to Home & Resource Links */
+.sidebar-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+}
+
+.sidebar-nav-list li {
+  margin-bottom: 8px;
+}
+
+.sidebar-nav-list a {
+  display: block;
+  padding: 7px 10px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #ba131a;
+  color: #1a1a2e;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 0 4px 4px 0;
+  transition: all 0.2s ease;
+}
+
+.sidebar-nav-list a:hover {
+  background-color: #ba131a;
+  color: #ffffff;
+  padding-left: 14px;
+}
+
+/* List with Image Links in Sidebar (as specified in page 5 & 6) */
+.sidebar-media-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.sidebar-media-list li {
+  margin-bottom: 10px;
+}
+
+.sidebar-media-link {
+  display: block;
+  overflow: hidden;
+  padding: 6px;
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-media-link:hover {
+  border-color: #ba131a;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.sidebar-thumb {
+  float: left;
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.sidebar-thumb-text {
+  float: left;
+  width: calc(100% - 56px);
+  font-size: 12px;
+  font-weight: 700;
+  color: #2c3e50;
+  line-height: 1.3;
+  padding-top: 4px;
+}
+
+.sidebar-thumb-desc {
+  font-size: 11px;
+  color: #7f8c8d;
+  font-weight: normal;
+}
+
+/* Audio & PDF Resource Links Box (as specified in page 7) */
+.resource-box {
+  background-color: #edf2f7;
+  border: 1px solid #cbd5e0;
+  border-radius: 5px;
+  padding: 12px;
+  margin-top: 15px;
+}
+
+.resource-box h3 {
+  margin-top: 0;
+  color: #1a202c;
+  font-size: 13px;
+  border-bottom: 1px dashed #a0aec0;
+  padding-bottom: 5px;
+}
+
+.resource-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resource-box li {
+  margin-bottom: 8px;
+}
+
+.resource-link {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #ba131a;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.resource-link:hover {
+  background-color: #ba131a;
+  color: #ffffff;
+}
+
+/* Main Content Section (Two-Column Layout) */
+section.content-main {
+  float: right;
+  width: 71%;
+  padding-left: 10px;
+}
+
+section.content-main h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: #780206;
+  margin-top: 0;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #ff4b2b;
+  padding-bottom: 6px;
+}
+
+/* Figure with Image and Caption */
+figure.featured-figure {
+  margin: 0 0 18px 0;
+  padding: 6px;
+  background-color: #f8f9fa;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+figure.featured-figure img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+
+figcaption {
+  font-size: 13px;
+  font-style: italic;
+  color: #4a5568;
+  text-align: center;
+  padding: 8px 10px 4px 10px;
+  font-weight: 600;
+}
+
+/* 2-Column Article in Section (Desktop and Tablet) */
+.article-two-col {
+  column-count: 2;
+  column-gap: 24px;
+  column-rule: 1px solid #e2e8f0;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.article-two-col p {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.section-block {
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: #fafbfc;
+  border: 1px solid #edf2f7;
+  border-radius: 6px;
+}
+
+.section-block h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ba131a;
+  font-size: 17px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.workout-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.workout-table th, .workout-table td {
+  padding: 8px 10px;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+.workout-table th {
+  background-color: #141e30;
+  color: #ffffff;
+}
+
+.workout-table tr:nth-child(even) {
+  background-color: #f7fafc;
+}
+
+/* ==========================================================================
+   PURE HTML & CSS BOOTSTRAP-COMPATIBLE CAROUSEL (NO JAVASCRIPT REQUIRED)
+   Uses hidden radio buttons + CSS selectors for interactive slide switching
+   ========================================================================== */
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto 24px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  background-color: #11141a;
+}
+
+/* Hide the radio inputs completely */
+.carousel-radio {
+  display: none;
+}
+
+/* Bootstrap-compatible carousel wrapper */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 380px;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  transform: scale(0.98);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 10%;
+  bottom: 25px;
+  left: 10%;
+  padding: 12px 18px;
+  color: #ffffff;
+  text-align: center;
+  background: rgba(17, 20, 26, 0.85);
+  border-radius: 6px;
+  border-bottom: 3px solid #ff4b2b;
+}
+
+.carousel-caption h3 {
+  margin: 0 0 4px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.carousel-caption p {
+  margin: 0;
+  font-size: 13px;
+  color: #f5af19;
+}
+
+/* Carousel Control Arrows (Pure CSS) */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  line-height: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+  display: none;
+  transition: background 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.carousel-control-prev {
+  left: 15px;
+}
+
+.carousel-control-next {
+  right: 15px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: #ba131a;
+  border-color: #ffffff;
+}
+
+/* Carousel Indicators (Dots) */
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 6px;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel-indicators label {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 14px;
+  height: 14px;
+  margin: 0 6px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Radio button state triggers for slides */
+#slide1:checked ~ .carousel .slide-1,
+#slide2:checked ~ .carousel .slide-2,
+#slide3:checked ~ .carousel .slide-3,
+#slide4:checked ~ .carousel .slide-4 {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  z-index: 5;
+}
+
+/* Radio button triggers for Indicators */
+#slide1:checked ~ .carousel .carousel-indicators label[for="slide1"],
+#slide2:checked ~ .carousel .carousel-indicators label[for="slide2"],
+#slide3:checked ~ .carousel .carousel-indicators label[for="slide3"],
+#slide4:checked ~ .carousel .carousel-indicators label[for="slide4"] {
+  background-color: #ff4b2b;
+  transform: scale(1.2);
+  border-color: #ffffff;
+}
+
+/* Controls visibility according to active slide */
+#slide1:checked ~ .carousel .ctrl-slide1,
+#slide2:checked ~ .carousel .ctrl-slide2,
+#slide3:checked ~ .carousel .ctrl-slide3,
+#slide4:checked ~ .carousel .ctrl-slide4 {
+  display: block;
+}
+
+/* Footer with Gradient */
+footer {
+  background: #141e30;
+  background: -webkit-linear-gradient(to right, #141e30, #780206);
+  background: linear-gradient(135deg, #141e30 0%, #780206 100%);
+  color: #f5f6fa;
+  text-align: center;
+  padding: 18px 20px;
+  font-size: 13px;
+  border-top: 3px solid #ff4b2b;
+}
+
+footer p {
+  margin: 4px 0;
+}
+
+footer a {
+  color: #f5af19;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Responsive Media Queries (Screen Media Type)
+   ========================================================================== */
+
+/* Tablet Landscape / Intermediate */
+@media only screen and (max-width: 900px) {
+  #container {
+    width: 96%;
+  }
+
+  aside.content-sidebar {
+    width: 28%;
+  }
+
+  section.content-main {
+    width: 68%;
+  }
+
+  .carousel-inner {
+    height: 320px;
+  }
+
+  .carousel-item img {
+    height: 320px;
+  }
+}
+
+/* Tablet Portrait & Mobile */
+@media only screen and (max-width: 768px) {
+  .header-logo {
+    float: none;
+    margin: 0 auto 10px auto;
+    display: block;
+  }
+
+  .header-titles {
+    float: none;
+    text-align: center;
+  }
+
+  nav.main-nav li {
+    float: none;
+  }
+
+  nav.main-nav a {
+    border-right: none;
+    border-bottom: 1px solid #252b33;
+  }
+
+  /* Single Column Stack */
+  aside.content-sidebar,
+  section.content-main {
+    float: none;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .article-two-col {
+    column-count: 1;
+    column-gap: 0;
+    column-rule: none;
+  }
+
+  .carousel-inner {
+    height: 250px;
+  }
+
+  .carousel-item img {
+    height: 250px;
+  }
+
+  .carousel-caption {
+    bottom: 15px;
+    padding: 8px 12px;
+  }
+
+  .carousel-caption h3 {
+    font-size: 15px;
+  }
+
+  .carousel-caption p {
+    font-size: 11px;
+  }
+}
+
+
+/* ==========================================================================
+   TRAINERS & CONTACT PAGE ENHANCEMENTS
+   ========================================================================== */
+
+/* Trainer Profiles */
+.trainer-card {
+  display: block;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #ba131a;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.trainer-card:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.trainer-avatar {
+  float: left;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-right: 18px;
+  border: 2px solid #e2e8f0;
+}
+
+.trainer-info {
+  float: left;
+  width: calc(100% - 110px);
+}
+
+.trainer-info h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #780206;
+  font-size: 18px;
+  margin: 0 0 4px 0;
+}
+
+.trainer-role {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ff4b2b;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.trainer-info p {
+  font-size: 13.5px;
+  color: #4a5568;
+  margin: 0 0 8px 0;
+}
+
+.trainer-badges {
+  margin-top: 6px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #141e30;
+  color: #f5af19;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+
+/* Contact Form & Contact Details */
+.contact-form {
+  background-color: #fafbfc;
+  border: 1px solid #edf2f7;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 13.5px;
+  color: #2d3748;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #2d3748;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #ba131a;
+  box-shadow: 0 0 0 3px rgba(186, 19, 26, 0.15);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn-submit {
+  display: inline-block;
+  background: linear-gradient(135deg, #ba131a 0%, #ff4b2b 100%);
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.contact-info-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.contact-info-card h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: #ba131a;
+  margin: 0 0 8px 0;
+}
+
+.contact-info-card p {
+  margin: 0 0 6px 0;
+  font-size: 13.5px;
+  color: #4a5568;
+}
+
+@media only screen and (max-width: 600px) {
+  .trainer-avatar {
+    float: none;
+    margin: 0 auto 12px auto;
+    display: block;
+  }
+  .trainer-info {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+}

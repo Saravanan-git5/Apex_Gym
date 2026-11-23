@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore state-of-the-art gym equipment at APEX GYM  – Fitness & Health Club, featuring our interactive photo carousel, audio guide, workout plan, and contact form.">
+  <title>Gym Equipments, Photos &amp; Contact - APEX GYM</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/content.css">
+</head>
+<body>
+
+  <div id="container">
+    
+    <!-- Header with Gradient & Logo -->
+    <header>
+      <div class="header-brand clearfix">
+        <img src="https://i.pinimg.com/736x/8d/07/ad/8d07adc8fae9b8ccb4be2d442497d0b8.jpg" alt="APEX GYM Logo" class="header-logo" onerror="this.onerror=null;this.src='images/placeholder.svg';">
+        <div class="header-titles">
+          <h1> APEX GYM  – Fitness & Health Club</h1>
+          <p class="tagline">World-Class Equipment, Ergonomic Engineering &amp; Safety Standards</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Horizontal Navigation Menu -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fitness-guide.html">Fitness &amp; Calisthenics</a></li>
+        <li><a href="equipments.html" class="current">Equipments &amp; Photos</a></li>
+        <li><a href="fitness-guide.html#trainers">Personal Trainers</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Two-Column Layout Body -->
+    <div id="main-wrapper" class="clearfix">
+
+      <!-- Left Aside (Sidebar) -->
+      <aside class="content-sidebar">
+        <h2>Navigation</h2>
+        <ul class="sidebar-nav-list">
+          <li><a href="index.html">&larr; Return to Home Page</a></li>
+          <li><a href="fitness-guide.html">&rarr; Workout Instructions</a></li>
+          <li><a href="fitness-guide.html#trainers">&rarr; Meet Personal Trainers</a></li>
+          <li><a href="#contact">&rarr; Contact &amp; Location</a></li>
+        </ul>
+
+        <!-- Additional Resources (Link to Audio file & Link to PDF file) -->
+        <div class="resource-box">
+          <h3>Download &amp; Listen</h3>
+          <ul>
+            <li>
+              <a href="media/ApexGym.pdf.pdf" target="_blank" class="resource-link">
+                &darr; Equipment Manual (PDF)
+              </a>
+            </li>
+            <li>
+              <a href="media/FUNK DE BELEZA SLOWED.mp3" class="resource-link">
+                &rtrif; Equipment Tour Audio (MP3)
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <h3>Equipment Zones</h3>
+        <ul class="sidebar-media-list">
+          <li>
+            <label for="slide1" class="sidebar-media-link clearfix" style="cursor: pointer;">
+              <img src="images/thumb-equipments.svg" alt="Olympic Bench" class="sidebar-thumb" onerror="this.onerror=null;this.src='images/placeholder.svg';">
+              <div class="sidebar-thumb-text">
+                Powerlifting Rig
+                <span class="sidebar-thumb-desc">Olympic Benches &amp; Cages</span>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label for="slide2" class="sidebar-media-link clearfix" style="cursor: pointer;">
+              <img src="images/thumb-cardio.svg" alt="Cardio Deck" class="sidebar-thumb" onerror="this.onerror=null;this.src='images/placeholder.svg';">
+              <div class="sidebar-thumb-text">
+                Cardio Suite
+                <span class="sidebar-thumb-desc">HIIT &amp; Incline Treadmills</span>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label for="slide3" class="sidebar-media-link clearfix" style="cursor: pointer;">
+              <img src="images/thumb-equipments.svg" alt="Cable Station" class="sidebar-thumb" onerror="this.onerror=null;this.src='images/placeholder.svg';">
+              <div class="sidebar-thumb-text">
+                Cable Stations
+                <span class="sidebar-thumb-desc">Dual Functional Crossover</span>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label for="slide4" class="sidebar-media-link clearfix" style="cursor: pointer;">
+              <img src="images/thumb-calisthenics.svg" alt="Free Weights" class="sidebar-thumb" onerror="this.onerror=null;this.src='images/placeholder.svg';">
+              <div class="sidebar-thumb-text">
+                Free Weights
+                <span class="sidebar-thumb-desc">Hex Dumbbells 2kg &ndash; 60kg</span>
+              </div>
+            </label>
+          </li>
+        </ul>
+
+        <h3>Club Contacts</h3>
+        <div class="contact-info-card">
+          <h4>Address</h4>
+          <p>104 Velachery Main Road,</p>
+          <p>Chennai, TN 600042</p>
+          <p><strong>Phone:</strong> +91 98765 43210</p>
+          <p><strong>Email:</strong> info@APEX GYM.com</p>
+        </div>
+      </aside>
+
+      <!-- Main Content Section -->
+      <section class="content-main">
+        <h2>Gym Equipment Photo Section</h2>
+
+        <!-- =============================================================
+             BOOTSTRAP-STYLED CAROUSEL (STRICTLY PURE HTML & CSS - NO JS)
+             ============================================================= -->
+        <div class="carousel-container">
+          <!-- Hidden Radio Controllers -->
+          <input type="radio" name="carousel" id="slide1" class="carousel-radio" checked>
+          <input type="radio" name="carousel" id="slide2" class="carousel-radio">
+          <input type="radio" name="carousel" id="slide3" class="carousel-radio">
+          <input type="radio" name="carousel" id="slide4" class="carousel-radio">
+
+          <div class="carousel">
+            <div class="carousel-inner">
+              
+              <!-- Slide 1: Olympic Bench Press -->
+              <div class="carousel-item slide-1">
+                <img src="https://i.pinimg.com/1200x/45/62/cd/4562cda65697ccbfa065f6ad88668cec.jpg" alt="Heavy Olympic Bench Press Station" onerror="this.onerror=null;this.src='images/placeholder.svg';">
+                <div class="carousel-caption">
+                  <h3>Olympic Heavy Bench Press &amp; Power Station</h3>
+                  <p>Grade-A steel barbell uprights with safety spotter arms and high-density foam padding.</p>
+                </div>
+              </div>
+
+              <!-- Slide 2: Commercial Treadmill -->
+              <div class="carousel-item slide-2">
+                <img src="https://i.pinimg.com/736x/32/c8/ac/32c8ac82e20c9a4ed05c1ade680d97f4.jpg" alt="Commercial Grade Running Treadmill" onerror="this.onerror=null;this.src='images/placeholder.svg';">
+                <div class="carousel-caption">
+                  <h3>Pro Commercial Incline Treadmill</h3>
+                  <p>Low-impact shock absorption decks, interactive heart-rate telemetry, and uphill incline simulation.</p>
+                </div>
+              </div>
+
+              <!-- Slide 3: Dual Cable Cross Trainer -->
+              <div class="carousel-item slide-3">
+                <img src="https://i.pinimg.com/1200x/1c/24/87/1c2487d9b19e5ec44b7b92bc266e2df3.jpg" alt="Dual Pulley Functional Cable Machine" onerror="this.onerror=null;this.src='images/placeholder.svg';">
+                <div class="carousel-caption">
+                  <h3>Dual Pulley Functional Cable Machine</h3>
+                  <p>Multi-directional aircraft cables for isolation, rotational core power, and joint rehabilitation.</p>
+                </div>
+              </div>
+
+              <!-- Slide 4: Free Weight & Dumbbell Station -->
+              <div class="carousel-item slide-4">
+                <img src="https://i.pinimg.com/1200x/71/33/53/71335388876985cf7bd11d14d8f8addf.jpg" alt="Rubber Hex Dumbbells and Free Weights" onerror="this.onerror=null;this.src='images/placeholder.svg';">
+                <div class="carousel-caption">
+                  <h3>Solid Rubber Hex Dumbbells &amp; Kettlebell Station</h3>
+                  <p>Knurled chrome grips ranging from 2.5 kg to 60 kg for targeted hypertrophy and progressive overload.</p>
+                </div>
+              </div>
+
+            </div><!-- /.carousel-inner -->
+
+            <!-- Carousel Next & Prev Controls (Strictly Pure CSS) -->
+            <!-- Controls when slide 1 is active -->
+            <label for="slide4" class="carousel-control-prev ctrl-slide1" title="Previous">&#10094;</label>
+            <label for="slide2" class="carousel-control-next ctrl-slide1" title="Next">&#10095;</label>
+
+            <!-- Controls when slide 2 is active -->
+            <label for="slide1" class="carousel-control-prev ctrl-slide2" title="Previous">&#10094;</label>
+            <label for="slide3" class="carousel-control-next ctrl-slide2" title="Next">&#10095;</label>
+
+            <!-- Controls when slide 3 is active -->
+            <label for="slide2" class="carousel-control-prev ctrl-slide3" title="Previous">&#10094;</label>
+            <label for="slide4" class="carousel-control-next ctrl-slide3" title="Next">&#10095;</label>
+
+            <!-- Controls when slide 4 is active -->
+            <label for="slide3" class="carousel-control-prev ctrl-slide4" title="Previous">&#10094;</label>
+            <label for="slide1" class="carousel-control-next ctrl-slide4" title="Next">&#10095;</label>
+
+            <!-- Carousel Indicators (Dots) -->
+            <div class="carousel-indicators">
+              <label for="slide1" title="Olympic Bench Press"></label>
+              <label for="slide2" title="Cardio Treadmills"></label>
+              <label for="slide3" title="Cable Cross Machine"></label>
+              <label for="slide4" title="Dumbbell Rack"></label>
+            </div>
+
+          </div><!-- /.carousel -->
+        </div><!-- /.carousel-container -->
+
+        <!-- Equipment Overview Articles -->
+        <article class="article-two-col">
+          <p>
+            At APEX GYM  – Fitness & Health Club, our equipment selection reflects our relentless commitment to biomechanical excellence and user safety. Every machine is calibrated to deliver optimal resistance curves throughout the entire range of motion, reducing joint strain while maximizing muscular contraction.
+          </p>
+          <p>
+            From heavy-gauge power racks engineered for competitive powerlifters to fluid pulley cable systems suitable for physical therapy and seniors, our equipment caters to every level of athlete. Our coaches conduct regular daily inspections and sanitation routines across all stations.
+          </p>
+        </article>
+
+        <!-- Detailed Equipment Specifications Grid -->
+        <div class="section-block">
+          <h3>Equipment Maintenance &amp; Safety Standards</h3>
+          <p>
+            Members are requested to adhere to our safety standards to preserve machine longevity and maintain a clean training atmosphere:
+          </p>
+          <table class="workout-table">
+            <thead>
+              <tr>
+                <th>Zone</th>
+                <th>Apparatus</th>
+                <th>Safety Protocol</th>
+                <th>Recommended For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Free Weights</td>
+                <td>Olympic Barbells &amp; Hex Dumbbells</td>
+                <td>Always use collar clamps; avoid dropping rubber weights.</td>
+                <td>All Strength &amp; Hypertrophy Levels</td>
+              </tr>
+              <tr>
+                <td>Cardio Suite</td>
+                <td>Smart Treadmills &amp; Rowers</td>
+                <td>Clip emergency stop tether to clothing before running.</td>
+                <td>Cardiovascular Endurance &amp; Fat Loss</td>
+              </tr>
+              <tr>
+                <td>Cables</td>
+                <td>Dual Adjustable Pulleys</td>
+                <td>Ensure selector pin is fully engaged before pulling.</td>
+                <td>Rehabilitation, Core &amp; Accessory Work</td>
+              </tr>
+              <tr>
+                <td>Calisthenics</td>
+                <td>Wall-Mounted Rigs &amp; Parallel Bars</td>
+                <td>Ensure magnesium chalk is applied for secure hand grip.</td>
+                <td>Bodyweight Athletes &amp; Gymnastic Skills</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- =============================================================
+             CONTACT US & LOCATION SECTION (INTEGRATED CONTENT)
+             ============================================================= -->
+        <div id="contact" class="section-block" style="background-color: #ffffff; border: 2px solid #ba131a; margin-top: 30px;">
+          <h2 style="color: #780206; margin-top: 0; border-bottom: 2px solid #ff4b2b; padding-bottom: 6px;">
+            Contact Us &amp; Free Trial Pass
+          </h2>
+
+          <!-- Location Graphic / Map -->
+          <figure class="featured-figure">
+            <img src="images/Neon APEX GYM Map Marker.png" alt="Location Map of APEX GYM in Chennai" onerror="this.onerror=null;this.src='images/placeholder.svg';">
+            <figcaption>Conveniently located at 104 Velachery Main Road, Chennai with dedicated parking and metro access.</figcaption>
+          </figure>
+
+          <p>
+            Ready to jump-start your fitness journey or test our calisthenics facility? Fill out the inquiry form below to reserve a complimentary 1-day guest pass or schedule a 1-on-1 trainer consultation.
+          </p>
+
+          <!-- Contact Form (Pure HTML & CSS) -->
+          <div class="contact-form">
+            <h3 style="margin-top: 0; color: #ba131a; font-family: 'Montserrat', sans-serif;">Send an Inquiry / Book Free Trial</h3>
+            <form action="#" method="get">
+              
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" class="form-control" placeholder="e.g. Ramesh Kumar" required>
+              </div>
+
+              <div class="form-group">
+                <label for="emailAddr">Email Address *</label>
+                <input type="email" id="emailAddr" name="emailAddr" class="form-control" placeholder="name@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phoneNumber">Mobile Number *</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="+91 98765 43210" required>
+              </div>
+
+              <div class="form-group">
+                <label for="ageCategory">Age Category &amp; Demographic</label>
+                <select id="ageCategory" name="ageCategory" class="form-control">
+                  <option value="youth">Youth &amp; Teens (12 - 17)</option>
+                  <option value="adult-male">Adult Male (18 - 54)</option>
+                  <option value="adult-female">Adult Female (18 - 54)</option>
+                  <option value="senior">Active Senior (55+)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="fitnessGoal">Primary Training Objective</label>
+                <select id="fitnessGoal" name="fitnessGoal" class="form-control">
+                  <option value="calisthenics">Calisthenics &amp; Bodyweight Mastery</option>
+                  <option value="weightloss">Fat Loss &amp; Aerobic Conditioning</option>
+                  <option value="hypertrophy">Muscle Building &amp; Powerlifting</option>
+                  <option value="mobility">Joint Mobility &amp; Posture Correction</option>
+                  <option value="pt">1-on-1 Personal Coaching</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage">Your Message or Preferred Time for Visit</label>
+                <textarea id="userMessage" name="userMessage" class="form-control" placeholder="Tell us about your fitness background and goals..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">Submit Inquiry</button>
+            </form>
+          </div>
+
+        </div><!-- /#contact -->
+
+      </section>
+
+    </div><!-- /#main-wrapper -->
+
+    <!-- Website Footer with Gradient & Character Entities -->
+    <footer>
+      <p>&copy; 2026 APEX GYM  – Fitness & Health Club. All Rights Reserved. &bull; </p>
+      <p>Location: 104 Velachery Main Road, Chennai, Tamil Nadu &bull; Phone: +91 98765 43210</p>
+    </footer>
+
+  </div><!-- /#container -->
+
+</body>
+</html>

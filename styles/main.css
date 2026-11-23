@@ -1,0 +1,380 @@
+/* ==========================================================================
+   SARAVANAN GYM & FITNESS CLUB - MAIN STYLESHEET (main.css)
+   Layout: Three-column layout for home page (Header, 2 Asides, Section, Footer)
+   ========================================================================== */
+
+/* Typography & Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #2c3e50;
+  background-color: #e9ecef;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background-color: #e9ecef;
+}
+
+img:not([src]), img[src=""], img[src="null"] {
+  min-height: 60px;
+  background: #2c3e50 url('../images/placeholder.svg') no-repeat center center;
+  background-size: cover;
+  border: 1px dashed #e74c3c;
+}
+
+/* Page Container: Fixed-width and centered in browser window */
+#container {
+  width: 980px;
+  max-width: 98%;
+  margin: 20px auto;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid #dcdde1;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Header with Gradient Background */
+header {
+  background: #1e130c;
+  background: -webkit-linear-gradient(to right, #1a1a2e, #800020, #b22222);
+  background: linear-gradient(135deg, #141e30 0%, #780206 50%, #ba131a 100%);
+  color: #ffffff;
+  padding: 24px 30px;
+  position: relative;
+  border-bottom: 3px solid #ff4b2b;
+}
+
+.header-brand {
+  overflow: hidden;
+}
+
+.header-logo {
+  float: left;
+  width: 75px;
+  height: 75px;
+  margin-right: 20px;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
+}
+
+.header-titles {
+  float: left;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+header .tagline {
+  font-size: 15px;
+  font-style: italic;
+  color: #f5af19;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Horizontal Navigation Menu */
+nav.main-nav {
+  background-color: #11141a;
+  border-bottom: 1px solid #333a42;
+}
+
+nav.main-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav.main-nav li {
+  float: left;
+}
+
+nav.main-nav a {
+  display: block;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 13px 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border-right: 1px solid #252b33;
+  transition: all 0.25s ease-in-out;
+}
+
+nav.main-nav a:hover {
+  background-color: #ba131a;
+  color: #ffffff;
+}
+
+nav.main-nav a.current {
+  background-color: #ba131a;
+  color: #ffffff;
+  border-bottom: 3px solid #ff7657;
+}
+
+/* Clearfix Utility */
+.clearfix::after,
+#main-wrapper::after,
+header::after,
+nav.main-nav ul::after,
+section.home-content::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Three-Column Layout: Sidebar A, Main Content, Sidebar B */
+#main-wrapper {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* Left Aside: Sidebar A */
+aside.sidebar-left {
+  float: left;
+  width: 20%;
+  padding: 15px 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+}
+
+aside.sidebar-left h2,
+aside.sidebar-right h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #780206;
+  border-bottom: 2px solid #780206;
+  padding-bottom: 6px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+aside.sidebar-left ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+}
+
+aside.sidebar-left li {
+  margin-bottom: 10px;
+}
+
+aside.sidebar-left a {
+  color: #1a1a2e;
+  font-weight: 600;
+  font-size: 13px;
+  display: block;
+  padding: 6px 8px;
+  border-left: 3px solid #ba131a;
+  background-color: #ffffff;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
+
+aside.sidebar-left a:hover {
+  background-color: #ba131a;
+  color: #ffffff;
+  padding-left: 12px;
+}
+
+/* Center Section: Main Content */
+section.home-content {
+  float: left;
+  width: 56%;
+  margin: 0 2%;
+  padding: 5px 10px;
+}
+
+section.home-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  color: #780206;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+/* Floated Image within Section */
+.hero-image {
+  float: left;
+  width: 260px;
+  margin-right: 18px;
+  margin-bottom: 14px;
+  border: 1px solid #d1d8e0;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section.home-content p {
+  margin: 0 0 14px 0;
+  text-align: justify;
+  font-size: 14.5px;
+  color: #333333;
+}
+
+.intro-lead {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #141e30;
+}
+
+.highlight-box {
+  background-color: #fff8f5;
+  border: 1px solid #ffd8cc;
+  border-left: 4px solid #ff4b2b;
+  padding: 12px 16px;
+  margin: 18px 0;
+  border-radius: 4px;
+}
+
+.highlight-box h3 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 0 8px 0;
+  color: #ba131a;
+  font-size: 15px;
+}
+
+/* Right Aside: Sidebar B */
+aside.sidebar-right {
+  float: right;
+  width: 20%;
+  padding: 15px 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+}
+
+aside.sidebar-right ol {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+aside.sidebar-right li {
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #333333;
+}
+
+.quick-stats {
+  background-color: #141e30;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.quick-stats h3 {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+  color: #f5af19;
+}
+
+.quick-stats p {
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+/* Footer with Gradient Background */
+footer {
+  background: #141e30;
+  background: -webkit-linear-gradient(to right, #141e30, #780206);
+  background: linear-gradient(135deg, #141e30 0%, #780206 100%);
+  color: #f5f6fa;
+  text-align: center;
+  padding: 18px 20px;
+  font-size: 13px;
+  border-top: 3px solid #ff4b2b;
+}
+
+footer p {
+  margin: 4px 0;
+}
+
+footer a {
+  color: #f5af19;
+  text-decoration: underline;
+}
+
+/* Responsive Media Queries */
+@media only screen and (max-width: 900px) {
+  #container {
+    width: 95%;
+  }
+
+  aside.sidebar-left,
+  aside.sidebar-right {
+    width: 22%;
+  }
+
+  section.home-content {
+    width: 50%;
+    margin: 0 1%;
+  }
+
+  .hero-image {
+    width: 210px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-logo {
+    float: none;
+    margin: 0 auto 10px auto;
+    display: block;
+  }
+
+  .header-titles {
+    float: none;
+    text-align: center;
+  }
+
+  nav.main-nav li {
+    float: none;
+  }
+
+  nav.main-nav a {
+    border-right: none;
+    border-bottom: 1px solid #252b33;
+  }
+
+  /* Stack columns vertically */
+  aside.sidebar-left,
+  section.home-content,
+  aside.sidebar-right {
+    float: none;
+    width: 100%;
+    margin: 0 0 16px 0;
+  }
+
+  .hero-image {
+    float: none;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 15px auto;
+    display: block;
+  }
+}

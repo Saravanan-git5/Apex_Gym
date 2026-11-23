@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <circle cx="60" cy="60" r="58" fill="#1b2028" stroke="#f5af19" stroke-width="4"/>
+  <circle cx="60" cy="45" r="22" fill="#ffd166"/>
+  <path d="M26 100 C 26 72, 94 72, 94 100 Z" fill="#2c5364"/>
+  <polygon points="60,62 55,75 65,75" fill="#f5af19"/>
+</svg>

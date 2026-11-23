@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="100%" height="auto">
+  <rect width="600" height="280" fill="#202b38"/>
+  <line x1="0" y1="90" x2="600" y2="90" stroke="#37474f" stroke-width="12"/>
+  <line x1="0" y1="180" x2="600" y2="180" stroke="#37474f" stroke-width="16"/>
+  <line x1="180" y1="0" x2="180" y2="280" stroke="#37474f" stroke-width="14"/>
+  <line x1="420" y1="0" x2="420" y2="280" stroke="#37474f" stroke-width="18"/>
+  <!-- Map Pin -->
+  <circle cx="300" cy="130" r="28" fill="#e74c3c"/>
+  <circle cx="300" cy="130" r="10" fill="#ffffff"/>
+  <polygon points="280,140 320,140 300,185" fill="#e74c3c"/>
+  <text x="300" y="225" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">SARAVANAN GYM &amp; FITNESS CLUB</text>
+  <text x="300" y="250" font-family="'Segoe UI', sans-serif" font-size="13" fill="#f5af19" text-anchor="middle">104 Velachery Main Road, Chennai</text>
+</svg>
